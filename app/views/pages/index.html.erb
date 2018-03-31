@@ -1,0 +1,74 @@
+<% if !user_signed_in? %>
+      <style>
+            body {
+                  background: linear-gradient(
+                        rgba(0,0,0, 0.7),
+                        rgba(0,0,0, 0.7)
+                        ),url("/bg.png") no-repeat center center fixed;
+
+                  -webkit-background-size: cover;
+                  -moz-background-size: cover; 
+                  -o-background-size: cover; 
+                  background-size: cover; 
+
+            }
+            h1 {
+                  color: white;
+                  font-weight: bold;
+            }
+            .container-index {
+                  margin-right: 15%;
+                  margin-left: 15%;
+            }
+            .text {
+                  color: white;
+                  font-weight: 300;
+                  font-size: 150%;
+            }
+            .footer-links {
+                  text-align: center;
+                  color: white;
+                  margin-top: 30%;
+            }
+            .log-in {
+                  float: right;
+                  width: 300px;
+                  height: 150px;
+                  margin-top: 7.5%;
+            }
+            .sign-up {
+                  float: right;
+                  width: 300px;
+                  height: 250px;
+            }
+      </style>
+
+      <div class="container-index row">
+            <div class="col-sm-6">
+                  <h1>Welcome To Flutter </h1>
+                  <p class="text">   
+                        Follow your interests. Hear what people are talking about.<br>
+                        Join the conversation. <br>
+                        See what’s happening in the world right now
+                        Join Twitter today.
+                  </p>
+            </div>
+            <div class="col-sm-6">
+                  <div class="log-in panel">
+
+                  </div>
+                  <div class="sign-up panel">
+
+                  </div>
+            </div>
+            
+            <div class="col-sm-12">
+            <p class="footer-links">
+                  Follow your interests. Hear what people are talking about.Join the conversation.
+            </p>
+            </div>
+      </div>
+<% else %>
+
+Sigend In
+<% end %>
