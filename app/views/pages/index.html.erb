@@ -33,7 +33,7 @@
             .log-in {
                   float: right;
                   width: 300px;
-                  height: 150px;
+                  height: 205px;
                   margin-top: 7.5%;
             }
             .sign-up {
@@ -45,7 +45,7 @@
 
       <div class="container-index row">
             <div class="col-sm-6">
-                  <h1>Welcome To Flutter </h1>
+                  <h1>Welcome To Zajel </h1>
                   <p class="text">   
                         Follow your interests. Hear what people are talking about.<br>
                         Join the conversation. <br>
@@ -55,7 +55,18 @@
             </div>
             <div class="col-sm-6">
                   <div class="log-in panel">
-
+                  <br>
+                  <%= form_for(:user, :url => session_path(:user)) do |f| %>
+                  <%= f.label :email %>
+                  <%= f.text_field :email, class: "form-control" %>
+                  <%= f.label :password %>
+                  <%= f.password_field :password, class: "form-control" %>
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :remember_me %>
+                  <br>
+                  <%= f.submit "Log in" , class: "btn btn-primary" %>
+                  <%= link_to "Forgot your password?", new_password_path(:user) %>
+                  <% end %>
                   </div>
                   <div class="sign-up panel">
 

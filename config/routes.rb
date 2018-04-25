@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-	devise_for :users 
 	#resources :users do
 		#member do
 		  #get :following, :followers
@@ -9,9 +8,7 @@ Rails.application.routes.draw do
 	resources :relationships, only: [:create, :destroy]
 
 	resources :posts
-	devise_scope :user do
-  		get '/users/sign_out' => 'devise/sessions#destroy'
-	end
+
 	root 'pages#index'
 	
   	get '/home' => 'pages#home'
